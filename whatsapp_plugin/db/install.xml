@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/whatsapp_plugin/db" VERSION="20130407" COMMENT="XMLDB file for local whatsapp plugin"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+		<TABLE NAME="whatsappkey" COMMENT="each record is a whatsapp chat">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+				<FIELD NAME="accoutname" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+                <FIELD NAME="instanceid" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+                <FIELD NAME="licensekey" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+                <FIELD NAME="emailid" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+				<FIELD NAME="token" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+				<FIELD NAME="status" TYPE="int" LENGTH="10" default="" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+        <TABLE NAME="local_whatsapp" COMMENT="each record is a whatsapp chat">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="name" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+                <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="true" default="0" SEQUENCE="false"/>
+                <FIELD NAME="whatsappid" TYPE="text" LENGTH="255" default="" SEQUENCE="false"/>
+                <FIELD NAME="joinurl" TYPE="text" LENGTH="255" default=""  SEQUENCE="false"/>
+				<FIELD NAME="page" TYPE="int" LENGTH="10" default="" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+	<TABLE NAME="local_whatsapp_time" COMMENT="each record is a whatsapp chat">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="last_text" TYPE="text" LENGTH="255" Default="" SEQUENCE="false"/>
+                <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+                <FIELD NAME="user_id" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+                <FIELD NAME="last_chat_time" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+                <FIELD NAME="local_whatsappid" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+				<FIELD NAME="mute" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+				<FIELD NAME="pin" TYPE="int" LENGTH="10" NOTNULL="false" Default="0" SEQUENCE="false"/>
+				<FIELD NAME="archive" TYPE="int" LENGTH="1" NOTNULL="false" Default="0" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>

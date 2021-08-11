@@ -1,0 +1,87 @@
+.loaderdiv{
+	display:none;
+	position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+  #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+			position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+		}
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+ .close:not(:disabled):not(.disabled) {
+	z-index:9999 !important;
+ }       
+.tab-pane.fade.active.show{
+	opacity:1;
+}
+.modal-backdrop.fade{
+	z-index:0;
+}
+.modal-title{
+	float:left;
+	color:#212529;
+}
+.modal-dialog .close{
+	color:#212529;
+	display: block;
+	width: 24px;
+	position: absolute;
+	right:0;
+}
+button.addnewpopup{
+	float:left;
+    right: 14px;
+    margin-top: 7px !important;
+}
+.modal.in .modal-dialog{
+	margin-top:4%;
+}
+h3.main{display:none !important;}
+.nav-tabs>li.active a{
+	background-color:#eee;
+}
+#adminsettings .tab-pane h3{
+   font-size:22px;
+   margin-top:0;
+   text-align:left;
+}
+td.media-middle{
+   vertical-align:middle !important;
+   max-width:300px;
+   word-wrap: break-word;
+}
+.checkboxallusers input[type=checkbox]{margin-right:10px;}
+.checkboxallusers{padding-top:11px;}
+
+.whatsapp-form .table-responsive {padding: 20px;background: #fff;}
+.whatsapp-form .table-responsive  .table th, .whatsapp-form .table-responsive .table td {padding-top: 1rem !important; padding-bottom: 1rem !important;}
+.whatsapp-form .table-responsive  .table th input[type="text"], .whatsapp-form .table-responsive  .table td input[type="text"] {width: 100%;padding: 5px 15px;}
+.whatsapp-form .table-responsive  .table th select, .whatsapp-form .table-responsive  .table td select {font-size: 14px; width: 100%;}
+#admin-config_showbest .form-label.col-sm-3.text-sm-right{ max-width:inherit;flex:none; width:100%;text-align:left;float:left;}
+#admin-config_showbest .form-setting.col-sm-9{display:none;}
+ul.nav.nav-tabs.m-0 li a{background-color:#eee;line-height:40px;padding:13px 20px;}
+ul.nav.nav-tabs.m-0 li.active{color:#FFF;background-color:#272b58;}
+ul.nav.nav-tabs.m-0 li.active a{background-color: initial;color: #FFF;}
+#page-admin-setting-blocksettingwhatsapp_plugin .row .offset-sm-3.col-sm-3{display:none !important;}
+label[for=id_s_block_whatsapp_plugin_config_showbest]{width:100%;}
